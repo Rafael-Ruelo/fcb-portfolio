@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+	<link rel="shortcut icon" href="./favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+	<link rel="manifest" href="./site.webmanifest" />
+
+    <title>Rafael Ruelo - CS student</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0c1214;
+        /* Deep cool slate / dark pine earth tone */
+        color: #d1dcde;
+      }
+
+      h1,
+      h2,
+      h3,
+      .font-heading {
+        font-family: 'Space Grotesk', sans-serif;
+      }
+
+      /* Futuristic cool earth palette highlights */
+      .bg-futuristic-dark {
+        background: radial-gradient(circle at 50% 0%, #152226 0%, #0a1012 100%);
+      }
+
+      .futuristic-card {
+        background: #111a1d;
+        border: 1px solid #1f3337;
+      }
+
+      .futuristic-card:hover {
+        border-color: #3b6564;
+      }
+
+      .futuristic-border {
+        border: 1px solid #1f3337;
+      }
+
+      .accent-btn-primary {
+        background-color: #244243;
+        color: #9fe3de;
+        border: 1px solid #376361;
+        transition: all 0.2s ease;
+      }
+
+      .accent-btn-primary:hover {
+        background-color: #2f5757;
+        color: #c7fbf7;
+        border-color: #599793;
+      }
+
+      .accent-btn-secondary {
+        background-color: #172224;
+        color: #a2b7b8;
+        border: 1px solid #283e41;
+        transition: all 0.2s ease;
+      }
+
+      .accent-btn-secondary:hover {
+        background-color: #203134;
+        color: #d1dcde;
+        border-color: #3b5c60;
+      }
+
+      .project-btn {
+        background-color: #1d72b8;
+        /* Matching the bright blue accent in wireframe button or cool earth teal/cyan */
+        background: linear-gradient(135deg, #2b7a78 0%, #175e7a 100%);
+        color: #e6f8f9;
+        border: 1px solid #3fa8a3;
+        transition: all 0.2s ease;
+      }
+
+      .project-btn:hover {
+        background: linear-gradient(135deg, #389593 0%, #1d7496 100%);
+        color: #ffffff;
+        box-shadow: 0 0 15px rgba(59, 168, 163, 0.3);
+      }
+    </style>
+  </head>
+  <body class="bg-futuristic-dark min-h-screen flex flex-col justify-between selection:bg-[#2b7a78] selection:text-white">
+    <!-- ==================== NAVBAR ==================== -->
+    <header class="w-full border-b border-[#1a2c2f] bg-[#0c1315]/90 backdrop-blur-md sticky top-0 z-50">
+      <nav class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+        <!-- EDIT: NAVBAR_BRAND -->
+        <a class="font-heading text-lg font-bold tracking-wider text-[#d6e5e3] hover:text-[#7ee2d7] transition-colors" href="#">
+          <!-- EDIT: NAVBAR_BRAND_TEXT --> CS student at FEU-Tech
+        </a>
+        <!-- Navigation Links -->
+        <div class="flex items-center space-x-6 sm:space-x-8 text-sm font-medium text-[#8ea7a7]">
+          <a class="hover:text-[#7ee2d7] transition-colors" href="#about">About</a>
+          <a class="hover:text-[#7ee2d7] transition-colors" href="#projects">Projects</a>
+          <a class="hover:text-[#7ee2d7] transition-colors" href="#skills">Skills/Tools</a>
+          <a class="hover:text-[#7ee2d7] transition-colors" href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <main class="max-w-5xl mx-auto px-6 py-12 w-full space-y-24">
+      <!-- ==================== HERO SECTION ==================== -->
+      <section class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center pt-6">
+        <!-- Hero Avatar / Profile Image -->
+        <div class="md:col-span-5 flex justify-center md:justify-start">
+          <div class="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-2xl futuristic-border bg-[#101b1e] p-2 overflow-hidden shadow-2xl relative">
+            <!-- EDIT: PROFILE_IMAGE -->
+            <img alt="Profile Avatar" class="w-full h-full object-cover rounded-xl" src="./mypic.JPG" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+        </div>
+        <!-- Hero Intro Text -->
+        <div class="md:col-span-7 flex flex-col justify-center text-left space-y-4">
+          <!-- EDIT: HEADING -->
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#e5f0ee]"> Rafael Ruelo </h1>
+          <!-- EDIT: JOB_TITLE -->
+          <h2 class="text-xl sm:text-2xl font-semibold text-[#66b5ab]"> CS Student </h2>
+          <!-- EDIT: SHORT_INTRODUCTION -->Computer Science student at FEU Tech exploring software development, programming, web and mobile applications, and practical software engineering solutions.
+          <p class="text-base text-[#92a8a8] leading-relaxed pt-1"> Short Introduction </p>
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap gap-4 pt-3">
+            <!-- EDIT: HERO_PROJECTS_BUTTON -->
+            <a class="accent-btn-primary px-6 py-2.5 rounded-lg text-sm font-medium tracking-wide" href="#projects"> View My Projects </a>
+            <!-- EDIT: HERO_CONTACT_BUTTON -->
+            <a class="accent-btn-secondary px-6 py-2.5 rounded-lg text-sm font-medium tracking-wide" href="#contact"> Contact Me </a>
+          </div>
+        </div>
+      </section>
+      <!-- ==================== ABOUT ME SECTION ==================== -->
+      <section class="space-y-6 text-center" id="about">
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-wide text-[#e5f0ee]"> About Me </h2>
+        <!-- Large Futuristic Container for About -->
+        <div class="w-full min-h-[180px] p-8 sm:p-10 rounded-3xl futuristic-border bg-[#0f1719] flex items-center justify-center shadow-lg">
+          <!-- EDIT: ABOUT_YOU -->I am a Computer Science student at FEU Institute of Technology (FEU Tech) with an interest in software development, problem-solving, and building practical technology solutions. My technical interests include programming, web development, application development, and exploring software engineering principles through academic and personal projects. I enjoy learning new technologies, strengthening my coding fundamentals, and developing applications that address real-world needs. Through continuous learning and hands-on practice, I aim to grow as a software developer and contribute to meaningful, user-focused digital solutions.
+          <p class="text-base sm:text-lg text-[#9ab0b0] max-w-2xl leading-relaxed"> About You </p>
+        </div>
+      </section>
+      <!-- ==================== PROJECTS SECTION ==================== -->
+      <section class="space-y-8 text-center" id="projects">
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-wide text-[#e5f0ee]"> Projects </h2>
+        <!-- Exactly 3 Project Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+          <!-- Card 1 -->
+          <div class="futuristic-card rounded-2xl overflow-hidden flex flex-col shadow-lg">
+            <!-- EDIT: PROJECT_IMAGE_1 -->
+            <div class="w-full h-48 bg-[#18262a] overflow-hidden">
+              <img alt="Project Image 1" class="w-full h-full object-cover" src="https://thumbs.dreamstime.com/b/illustration-cartoon-whale-likely-baleen-species-emerging-stylized-ocean-illustration-cartoon-whale-likely-388538743.jpg" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div class="space-y-2">
+                <!-- EDIT: PROJECT_TITLE_1 -->
+                <h3 class="text-xl font-bold text-[#e5f0ee]"> Baleen – Smart Photo Decluttering App </h3>
+                <!-- EDIT: PROJECT_DESCRIPTION_1 -->
+                <p class="text-sm text-[#8ea5a5] leading-relaxed"> A mobile application concept designed to simplify photo gallery management through swipe-based image sorting, allowing users to keep or delete photos efficiently. Built with mobile app development technologies, the project explores intuitive UI/UX design, file management, and automated decluttering reminders.</p>
+              </div>
+              <!-- EDIT: PROJECT_LINK_1 -->
+              <a class="project-btn inline-block text-center w-full py-2.5 px-4 rounded-xl text-sm font-semibold tracking-wide" href="#"> Project Link </a>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="futuristic-card rounded-2xl overflow-hidden flex flex-col shadow-lg">
+            <!-- EDIT: PROJECT_IMAGE_2 -->
+            <div class="w-full h-48 bg-[#18262a] overflow-hidden">
+              <img alt="Project Image 2" class="w-full h-full object-cover" src="https://www.bing.com/th/id/OIP.gCfsMWROR9oXMDP9TY5naQHaE7?w=193&h=135&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=ImgAns&rm=2" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div class="space-y-2">
+                <!-- EDIT: PROJECT_TITLE_2 -->
+                <h3 class="text-xl font-bold text-[#e5f0ee]"> Commuter Route Finder – Community-Based Navigation App </h3>
+                <!-- EDIT: PROJECT_DESCRIPTION_2 -->
+                <p class="text-sm text-[#8ea5a5] leading-relaxed"> A mobile app concept that helps commuters discover local transportation routes through community-contributed route information and accessible navigation features. This project explores software engineering, mobile application development, database management, and location-based services to support more convenient daily travel. </p>
+              </div>
+              <!-- EDIT: PROJECT_LINK_2 -->
+              <a class="project-btn inline-block text-center w-full py-2.5 px-4 rounded-xl text-sm font-semibold tracking-wide" href="#"> Project Link </a>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="futuristic-card rounded-2xl overflow-hidden flex flex-col shadow-lg">
+            <!-- EDIT: PROJECT_IMAGE_3 -->
+            <div class="w-full h-48 bg-[#18262a] overflow-hidden">
+              <img alt="Project Image 3" class="w-full h-full object-cover" src="https://th.bing.com/th/id/OIP.nzHYy1aB8vMqKQAVZUlSVQHaFN?w=250&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div class="space-y-2">
+                <!-- EDIT: PROJECT_TITLE_3 -->
+                <h3 class="text-xl font-bold text-[#e5f0ee]"> Personal Budget Tracker – Expense Management System </h3>
+                <!-- EDIT: PROJECT_DESCRIPTION_3 -->
+                <p class="text-sm text-[#8ea5a5] leading-relaxed"> A personal finance application concept that enables users to record expenses, categorize spending, set budgets, and monitor their financial habits through simple summaries. The project demonstrates programming fundamentals, CRUD operations, database integration, and user-centered software design to support practical financial management. </p>
+              </div>
+              <!-- EDIT: PROJECT_LINK_3 -->
+              <a class="project-btn inline-block text-center w-full py-2.5 px-4 rounded-xl text-sm font-semibold tracking-wide" href="#"> Project Link </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==================== SKILLS AND TOOLS SECTION ==================== -->
+      <section class="space-y-8 text-center" id="skills">
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-wide text-[#e5f0ee]"> Skills and Tools </h2>
+        <!-- Exactly 2 Cards: Skills and Tools / Technologies -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+          <!-- Skills Card -->
+          <div class="futuristic-card rounded-2xl p-6 sm:p-8 shadow-md">
+            <!-- EDIT: SKILLS_HEADING -->
+            <h3 class="text-lg font-bold text-[#66b5ab] pb-4 border-b border-[#1f3337] tracking-wide"> Skills </h3>
+            <!-- EDIT: SKILLS_LIST -->
+            <ul class="divide-y divide-[#172528] pt-2 text-[#9ab0b0] text-sm">
+              <li class="py-3">Programming (Python, Java, C++, JavaScript, PHP)</li>
+              <li class="py-3">Front-End Web Development (HTML, CSS, Responsive Design)</li>
+              <li class="py-3">Software Development and Problem-Solving</li>
+            </ul>
+          </div>
+          <!-- Tools Card -->
+          <div class="futuristic-card rounded-2xl p-6 sm:p-8 shadow-md">
+            <!-- EDIT: TOOLS_HEADING -->
+            <h3 class="text-lg font-bold text-[#66b5ab] pb-4 border-b border-[#1f3337] tracking-wide"> Tools / Technologies </h3>
+            <!-- EDIT: TOOLS_LIST -->
+            <ul class="divide-y divide-[#172528] pt-2 text-[#9ab0b0] text-sm">
+              <li class="py-3">Visual Studio Code</li>
+              <li class="py-3">Git and GitHub</li>
+              <li class="py-3">Android Studio</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- ==================== CONTACT SECTION ==================== -->
+      <section class="space-y-8 text-center" id="contact">
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-wide text-[#e5f0ee]"> Contact </h2>
+        <!-- Contact Container matching Wireframe layout -->
+        <div class="w-full p-8 sm:p-12 rounded-3xl futuristic-border bg-[#0f1719] shadow-lg flex flex-col items-center justify-center space-y-4">
+          <!-- EDIT: YOUR_EMAIL -->
+          <p class="text-sm sm:text-base text-[#9ab0b0]"> Email: rjruelo@gmail.com<span class="text-[#cde2e0]"></span>
+          </p>
+          <!-- EDIT: YOUR_CONTACT_INFORMATION -->
+          <p class="text-sm sm:text-base text-[#9ab0b0]"> Contact: 09876543210<span class="text-[#cde2e0]"></span>
+          </p>
+          <!-- EDIT: YOUR_SOCIAL_LINK -->
+          <p class="text-sm sm:text-base text-[#9ab0b0]"> Social Media: <a class="text-[#66b5ab] hover:text-[#8ee5db] underline transition-colors" href="https://github.com/Rafael-Ruelo"></a>
+          </p>
+        </div>
+      </section>
+    </main>
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="w-full border-t border-[#1a2c2f] bg-[#090e10] py-8 text-center mt-20">
+      <!-- EDIT: FOOTER -->
+      <p class="text-sm text-[#667e7e] tracking-wider uppercase font-medium"> © YYYY  Rafael Ruelo. All rights reserved. </p>
+    </footer>
+  </body>
+</html>
+
